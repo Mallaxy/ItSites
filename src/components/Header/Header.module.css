@@ -1,0 +1,27 @@
+.header {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    background-color: gainsboro;
+    border-bottom: solid 2px black;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    max-height: 75px;
+    max-width: 75px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.navbar {
+    justify-self: end;
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
