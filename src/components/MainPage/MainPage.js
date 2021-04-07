@@ -8,10 +8,9 @@ import s from './MainPage.module.css'
 import FilterContainer from "../Filter/FilterContainer";
 
 export const MainPage = (props) => {
-
     return (
         <div className={s.mainPage}>
-            <FilterContainer />
+            <FilterContainer/>
             <Route path='/list' render={() => <ListPageContainer/>}/>
             <Route path='/favorite' render={() => <FavoritePageContainer/>}/>
             <Route path='/cart' render={() => <CartPageContainer/>}/>

@@ -4,7 +4,7 @@ import {ListPage} from "./ListPage";
 import {toggleCart, toggleCompare, toggleFavorite} from "../../redux/listReducer";
 
 const ListPageContainer = (props) => {
-    let filteredItems = props.itemsData.filter(item => filtering(item, props.filterValues) )
+    let filteredItems = props.itemsData.filter(item => filtering(item, props.filterValues))
     return (
         <ListPage filteredItems={filteredItems} {...props} />
     )
