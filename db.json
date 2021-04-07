@@ -1,0 +1,112 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "img": "https://media.knivesandtools.com/Exact675x450/58778/vt5.4063.18$01-victorinox-vibrox-vt5.4063.18-01.jpg",
+      "price": "10",
+      "title": "Knife",
+      "blade": "iron",
+      "handle": "plastic",
+      "length": "25",
+      "favorite": false,
+      "inCart": false,
+      "compare": false
+    },
+    {
+      "id": 2,
+      "img": "https://www.specshop.pl/eng_pl_Muela-Knife-Outdoor-Rubber-Handle-180mm-85-180-22186_1.jpg",
+      "price": "10",
+      "title": "Knife",
+      "blade": "iron",
+      "handle": "wood",
+      "length": "15",
+      "favorite": false,
+      "inCart": false,
+      "compare": false
+    },
+    {
+      "id": 3,
+      "img": "https://cdn.shopify.com/s/files/1/0202/8734/products/sai_processed_tiny-01.progressive.jpg?v=1496811449",
+      "price": "10",
+      "title": "Knife",
+      "blade": "iron",
+      "handle": "plastic",
+      "length": "25",
+      "favorite": false,
+      "inCart": false,
+      "compare": false
+    },
+    {
+      "id": 4,
+      "img": "https://www.specshop.pl/eng_pl_Muela-Knife-Outdoor-Rubber-Handle-180mm-85-180-22186_1.jpg",
+      "price": "10",
+      "title": "Knife",
+      "blade": "ceramic",
+      "handle": "wood",
+      "length": "20",
+      "favorite": false,
+      "inCart": false,
+      "compare": false
+    },
+    {
+      "id": 5,
+      "img": "https://x-gear.com.ua/images/products/pictures/tojiro-utility-knife-f-525-15sm-B.jpg",
+      "price": "10",
+      "title": "Knife",
+      "blade": "ceramic",
+      "handle": "steel",
+      "length": "25",
+      "favorite": false,
+      "inCart": false,
+      "compare": false
+    },
+    {
+      "id": 6,
+      "img": "https://i.pinimg.com/originals/77/49/ae/7749ae88582090dd254be9dbaa796aa6.jpg",
+      "price": "10",
+      "title": "Knife",
+      "blade": "ceramic",
+      "handle": "wood",
+      "length": "15",
+      "favorite": false,
+      "inCart": false,
+      "compare": false
+    },
+    {
+      "id": 7,
+      "img": "https://x-gear.com.ua/images/products/pictures/tojiro-utility-knife-f-525-15sm-B.jpg",
+      "price": "10",
+      "title": "Knife",
+      "blade": "titanium",
+      "handle": "steel",
+      "length": "20",
+      "favorite": false,
+      "inCart": false,
+      "compare": false
+    },
+    {
+      "id": 8,
+      "img": "https://images.ua.prom.st/1682382688_w640_h640_nozh-kerambit-.jpg",
+      "price": "10",
+      "title": "Knife",
+      "blade": "titanium",
+      "handle": "plastic",
+      "length": "20",
+      "favorite": false,
+      "inCart": false,
+      "compare": false
+    },
+    {
+      "id": 9,
+      "img": "https://static.turbosquid.com/Preview/001208/589/NL/3D-katana-sword_600.jpg",
+      "price": "10",
+      "title": "Knife",
+      "blade": "titanium",
+      "handle": "steel",
+      "length": "15",
+      "favorite": false,
+      "inCart": false,
+      "compare": false
+    }
+  ]
+}

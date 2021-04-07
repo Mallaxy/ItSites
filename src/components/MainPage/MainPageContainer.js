@@ -10,7 +10,6 @@ const MainPageContainer = (props) => {
       let items = await response.json();
       props.setItems(items);
     }
-
     fetchData();
   }
 
