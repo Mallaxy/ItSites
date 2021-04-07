@@ -1,11 +1,9 @@
-import React from 'react'
-import {connect} from "react-redux";
+import { connect } from "react-redux";
 import Filter from "./Filter";
-import {setFilterValues} from "../../redux/filterReducer";
-
+import { setFilterValues } from "../../redux/filterReducer";
 
 let mapStateToProps = (state) => ({
-    values: state.filter,
-})
+  values: state.filter,
+});
 
-export default connect(mapStateToProps, {setFilterValues})(Filter)
+export default connect(mapStateToProps, { setFilterValues })(Filter);

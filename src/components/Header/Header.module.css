@@ -1,35 +1,35 @@
 .header {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    background-color: gainsboro;
-    border-bottom: solid 2px black;
-    border-right: solid 2px black;
-    border-left: solid 2px black;
-    border-radius: 0 0 10px 10px ;
-    z-index: 3;
-    position: sticky;
-    top: 0;
-    left: 0;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  background-color: gainsboro;
+  border-bottom: solid 2px black;
+  border-right: solid 2px black;
+  border-left: solid 2px black;
+  border-radius: 0 0 10px 10px;
+  z-index: 3;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 .logo {
-    max-height: 75px;
-    max-width: 75px;
-    margin: 0 auto;
+  max-height: 75px;
+  max-width: 75px;
+  margin: 0 auto;
 }
 
 .logo img {
-    height: 100%;
+  height: 100%;
 }
 
 .navbar {
-    padding: 0 50px;
-    justify-self: end;
-    align-self: center;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+  padding: 0 50px;
+  justify-self: end;
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 .navbar * {
-    cursor: pointer;
+  cursor: pointer;
 }

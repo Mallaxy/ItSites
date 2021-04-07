@@ -1,19 +1,27 @@
-import React from 'react'
-import {connect} from "react-redux";
-import {ListPage} from "../ListPage/ListPage";
-import {toggleCart, toggleCompare, toggleFavorite} from "../../redux/listReducer";
-import {filtering} from "../ListPage/ListPageContainer";
+import React from "react";
+import { connect } from "react-redux";
+import { ListPage } from "../ListPage/ListPage";
+import {
+  toggleCart,
+  toggleCompare,
+  toggleFavorite,
+} from "../../redux/listReducer";
+import { filtering } from "../ListPage/ListPageContainer";
 
 const CartPageContainer = (props) => {
-    let filteredItems = props.itemsData.filter(item => filtering(item, props.filterValues) )
-    return (
-        <ListPage filteredItems={filteredItems} {...props} />
-    )
-}
+  let filteredItems = props.itemsData.filter((item) =>
+    filtering(item, props.filterValues)
+  );
+  return <ListPage filteredItems={filteredItems} {...props} />;
+};
 
 const mapStateToProps = (state) => ({
-    filterValues: state.filter,
-    itemsData: state.mainPage.cartItems
-})
+  filterValues: state.filter,
+  itemsData: state.mainPage.cartItems,
+});
 
-export default connect(mapStateToProps, {toggleFavorite, toggleCart, toggleCompare})(CartPageContainer)
+export default connect(mapStateToProps, {
+  toggleFavorite,
+  toggleCart,
+  toggleCompare,
+})(CartPageContainer);
