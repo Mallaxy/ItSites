@@ -13,7 +13,7 @@ const CartPageContainer = (props) => {
 
 const mapStateToProps = (state) => ({
     filterValues: state.filter,
-    itemsData: state.mainPage.itemsData.filter(item => item.inCart)
+    itemsData: state.mainPage.cartItems
 })
 
 export default connect(mapStateToProps, {toggleFavorite, toggleCart, toggleCompare})(CartPageContainer)

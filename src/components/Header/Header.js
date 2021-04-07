@@ -1,6 +1,11 @@
 import React from 'react'
 import s from './Header.module.css'
 import {NavLink} from "react-router-dom";
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import Badge from '@material-ui/core/Badge';
+import CompareIcon from '@material-ui/icons/Compare';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+
 
 export const Header = (props) => {
     return (
@@ -13,13 +18,19 @@ export const Header = (props) => {
             </div>
             <div className={s.navbar}>
                 <NavLink to={'/favorite'}>
-                    <div>Favorite</div>
+                    <Badge badgeContent={props.favoriteLength} color="primary">
+                        <FavoriteIcon fontSize={"large"} color={'secondary'}/>
+                    </Badge>
                 </NavLink>
                 <NavLink to={'/compare'}>
-                    <div>Compare</div>
+                    <Badge badgeContent={props.compareLength} color="primary">
+                        <CompareIcon fontSize={"large"} color={'action'}/>
+                    </Badge>
                 </NavLink>
                 <NavLink to={'/cart'}>
-                    <div>Cart</div>
+                    <Badge badgeContent={props.cartLength} color="primary">
+                        <ShoppingCartIcon fontSize={"large"} color={'action'}/>
+                    </Badge>
                 </NavLink>
             </div>
         </div>

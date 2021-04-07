@@ -3,6 +3,10 @@
     grid-template-columns: 100px 1fr;
     background-color: gainsboro;
     border-bottom: solid 2px black;
+    border-right: solid 2px black;
+    border-left: solid 2px black;
+    border-radius: 0 0 10px 10px ;
+    z-index: 3;
     position: sticky;
     top: 0;
     left: 0;
@@ -19,9 +23,13 @@
 }
 
 .navbar {
+    padding: 0 50px;
     justify-self: end;
     align-self: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 30px;
+}
+.navbar * {
+    cursor: pointer;
 }

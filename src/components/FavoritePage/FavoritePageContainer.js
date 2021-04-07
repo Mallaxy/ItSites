@@ -13,7 +13,7 @@ const FavoritePageContainer = (props) => {
 
 const mapStateToProps = (state) => ({
     filterValues: state.filter,
-    itemsData: state.mainPage.itemsData.filter(item => item.favorite)
+    itemsData: state.mainPage.favoriteItems
 })
 
 export default connect(mapStateToProps, {toggleFavorite, toggleCart, toggleCompare})(FavoritePageContainer)

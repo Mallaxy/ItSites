@@ -12,7 +12,7 @@ const ComparePageContainer = (props) => {
 }
 const mapStateToProps = (state) => ({
     filterValues: state.filter,
-    itemsData: state.mainPage.itemsData.filter(item => item.compare)
+    itemsData: state.mainPage.compareItems
 })
 
 export default connect(mapStateToProps, {toggleFavorite, toggleCart, toggleCompare})(ComparePageContainer)

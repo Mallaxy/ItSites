@@ -6,6 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import {Provider} from "react-redux";
 import {BrowserRouter} from "react-router-dom";
 import {store} from "./redux/reduxStore";
+import {saveState} from "./localStorage";
+
+store.subscribe(() => {
+    saveState({
+        mainPage: store.getState().mainPage,
+    });
+});
 
 ReactDOM.render(
     <BrowserRouter>

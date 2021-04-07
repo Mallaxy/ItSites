@@ -1,47 +1,52 @@
 import {SET_ITEMS, TOGGLE_CART, TOGGLE_COMPARE, TOGGLE_FAVORITE} from "../common/constances";
 
 let initialState = {
-    itemsData: []
+    itemsData: [],
+    favoriteItems: [],
+    compareItems: [],
+    cartItems: []
 }
-
 
 export const listReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_ITEMS:
             return {
                 ...state,
-                itemsData: [...action.items]
+                itemsData: [...action.items],
             }
-        case TOGGLE_FAVORITE:
-            return {
-                ...state,
-                itemsData: state.itemsData.map(item => {
-                    if (item.id === action.itemId) {
-                        return {...item, favorite: !item.favorite}
-                    }
-                    return item
-                })
-            }
-        case TOGGLE_CART:
-            return {
-                ...state,
-                itemsData: state.itemsData.map(item => {
-                    if (item.id === action.itemId) {
-                        return {...item, inCart: !item.inCart}
-                    }
-                    return item
-                })
-            }
-        case TOGGLE_COMPARE:
-            return {
-                ...state,
-                itemsData: state.itemsData.map(item => {
-                    if (item.id === action.itemId) {
-                        return {...item, compare: !item.compare}
-                    }
-                    return item
-                })
-            }
+        case TOGGLE_FAVORITE: {
+            let stateCopy = {...state}
+            stateCopy.itemsData = [...stateCopy.itemsData.map(item => {
+                if (item.id === action.itemId) {
+                    return {...item, favorite: !item.favorite}
+                }
+                return item
+            })]
+            stateCopy.favoriteItems = [...stateCopy.itemsData.filter(item => item.favorite)]
+            return stateCopy
+        }
+        case TOGGLE_CART: {
+            let stateCopy = {...state}
+            stateCopy.itemsData = [...stateCopy.itemsData.map(item => {
+                if (item.id === action.itemId) {
+                    return {...item, inCart: !item.inCart}
+                }
+                return item
+            })]
+            stateCopy.cartItems = [...stateCopy.itemsData.filter(item => item.inCart)]
+            return stateCopy
+        }
+        case TOGGLE_COMPARE: {
+            let stateCopy = {...state}
+            stateCopy.itemsData = [...stateCopy.itemsData.map(item => {
+                if (item.id === action.itemId) {
+                    return {...item, compare: !item.compare}
+                }
+                return item
+            })]
+            stateCopy.compareItems = [...stateCopy.itemsData.filter(item => item.compare)]
+            return stateCopy
+        }
         default:
             return state
     }

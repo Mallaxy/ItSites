@@ -7,10 +7,10 @@ import ComparePageContainer from "../ComparePage/ComparePageContainer";
 import s from './MainPage.module.css'
 import FilterContainer from "../Filter/FilterContainer";
 
-export const MainPage = (props) => {
+export const MainPage = () => {
     return (
         <div className={s.mainPage}>
-            <FilterContainer/>
+            <FilterContainer className={s.filter}/>
             <Route path='/list' render={() => <ListPageContainer/>}/>
             <Route path='/favorite' render={() => <FavoritePageContainer/>}/>
             <Route path='/cart' render={() => <CartPageContainer/>}/>
