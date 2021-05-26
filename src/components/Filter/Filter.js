@@ -5,14 +5,13 @@ import { setFilterValues } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 
 export const Filter = () => {
+  const values = useSelector((state) => state.filter);
 
-  const values = useSelector(state => state.filter)
-
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleChange = (selector) => (event) => {
-    dispatch(setFilterValues({ [selector]: event.target.value }))
-  }
+    dispatch(setFilterValues({ [selector]: event.target.value }));
+  };
 
   return (
     <div className={s.filter}>

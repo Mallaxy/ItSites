@@ -8,12 +8,11 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { useSelector } from "react-redux";
 
 export const Header = () => {
-
-  const [favoriteLength, compareLength, cartLength] = useSelector(state => ([
+  const [favoriteLength, compareLength, cartLength] = useSelector((state) => [
     state.mainPage.favoriteItems.length,
     state.mainPage.compareItems.length,
-    state.mainPage.cartItems.length
-  ]))
+    state.mainPage.cartItems.length,
+  ]);
 
   return (
     <div className={s.header}>

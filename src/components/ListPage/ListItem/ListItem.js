@@ -12,11 +12,10 @@ import {
   toggleCompare,
   toggleFavorite,
 } from "../../../redux/actions";
-import { useDispatch } from "react-redux"
+import { useDispatch } from "react-redux";
 
 export const ListItem = (props) => {
-
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   return (
     <Card className={s.root}>

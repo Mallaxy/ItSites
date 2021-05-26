@@ -13,7 +13,7 @@ const initialState = {
 };
 
 export const listReducer = (state = initialState, action) => {
-  const stateCopy = { ...state }
+  const stateCopy = { ...state };
 
   switch (action.type) {
     case SET_ITEMS:
@@ -67,4 +67,3 @@ export const listReducer = (state = initialState, action) => {
       return state;
   }
 };
-
