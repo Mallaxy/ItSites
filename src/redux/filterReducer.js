@@ -1,6 +1,6 @@
 import { SET_FILTER_VALUES } from "../common/constances";
 
-let initialState = {
+const initialState = {
   blade: "",
   handle: "",
   length: "",
@@ -15,4 +15,4 @@ export const filterReducer = (state = initialState, action) => {
   }
 };
 
-export const setFilterValues = (value) => ({ type: SET_FILTER_VALUES, value });
+

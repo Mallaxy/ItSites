@@ -7,8 +7,17 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import FavoriteIcon from "@material-ui/icons/Favorite";
+import {
+  toggleCart,
+  toggleCompare,
+  toggleFavorite,
+} from "../../../redux/actions";
+import { useDispatch } from "react-redux"
 
 export const ListItem = (props) => {
+
+  const dispatch = useDispatch()
+
   return (
     <Card className={s.root}>
       <CardActionArea>
@@ -34,19 +43,19 @@ export const ListItem = (props) => {
         <FavoriteIcon
           fontSize={"large"}
           color={props.favorite ? "secondary" : "action"}
-          onClick={() => props.toggles.toggleFavorite(props.id)}
+          onClick={() => dispatch(toggleFavorite(props.id))}
         />
         <Button
           size="medium"
           color={props.compare ? "primary" : "action"}
-          onClick={() => props.toggles.toggleCompare(props.id)}
+          onClick={() => dispatch(toggleCompare(props.id))}
         >
           COMPARE
         </Button>
         <Button
           size="medium"
           color={props.inCart ? "primary" : "action"}
-          onClick={() => props.toggles.toggleCart(props.id)}
+          onClick={() => dispatch(toggleCart(props.id))}
         >
           CART
         </Button>

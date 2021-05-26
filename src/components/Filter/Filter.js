@@ -1,18 +1,27 @@
 import React from "react";
 import s from "./Filter.module.css";
 import { FormControl, InputLabel, Select } from "@material-ui/core";
+import { setFilterValues } from "../../redux/actions";
+import { useDispatch, useSelector } from "react-redux";
 
-export const Filter = (props) => {
+export const Filter = () => {
+
+  const values = useSelector(state => state.filter)
+
+  const dispatch = useDispatch()
+
+  const handleChange = (selector) => (event) => {
+    dispatch(setFilterValues({ [selector]: event.target.value }))
+  }
+
   return (
     <div className={s.filter}>
       <FormControl variant="filled" className={s.formControl}>
         <InputLabel htmlFor="outlined-age-native-simple">Blade</InputLabel>
         <Select
           native
-          value={props.values.blade}
-          onChange={(event) =>
-            props.setFilterValues({ blade: event.target.value })
-          }
+          value={values.blade}
+          onChange={handleChange("blade")}
           inputProps={{
             name: "Blade",
             id: "outlined-age-native-simple",
@@ -28,10 +37,8 @@ export const Filter = (props) => {
         <InputLabel htmlFor="outlined-age-native-simple">Handle</InputLabel>
         <Select
           native
-          value={props.values.handle}
-          onChange={(event) =>
-            props.setFilterValues({ handle: event.target.value })
-          }
+          value={values.handle}
+          onChange={handleChange("handle")}
           inputProps={{
             name: "Handle",
             id: "outlined-age-native-simple",
@@ -47,10 +54,8 @@ export const Filter = (props) => {
         <InputLabel htmlFor="outlined-age-native-simple">Length</InputLabel>
         <Select
           native
-          value={props.values.length}
-          onChange={(event) =>
-            props.setFilterValues({ length: event.target.value })
-          }
+          value={values.length}
+          onChange={handleChange("length")}
           inputProps={{
             name: "Length",
             id: "outlined-age-native-simple",

@@ -5,8 +5,16 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import Badge from "@material-ui/core/Badge";
 import CompareIcon from "@material-ui/icons/Compare";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import { useSelector } from "react-redux";
 
-export const Header = (props) => {
+export const Header = () => {
+
+  const [favoriteLength, compareLength, cartLength] = useSelector(state => ([
+    state.mainPage.favoriteItems.length,
+    state.mainPage.compareItems.length,
+    state.mainPage.cartItems.length
+  ]))
+
   return (
     <div className={s.header}>
       <div className={s.logo}>
@@ -19,17 +27,17 @@ export const Header = (props) => {
       </div>
       <div className={s.navbar}>
         <NavLink to={"/favorite"}>
-          <Badge badgeContent={props.favoriteLength} color="primary">
+          <Badge badgeContent={favoriteLength} color="primary">
             <FavoriteIcon fontSize={"large"} color={"secondary"} />
           </Badge>
         </NavLink>
         <NavLink to={"/compare"}>
-          <Badge badgeContent={props.compareLength} color="primary">
+          <Badge badgeContent={compareLength} color="primary">
             <CompareIcon fontSize={"large"} color={"action"} />
           </Badge>
         </NavLink>
         <NavLink to={"/cart"}>
-          <Badge badgeContent={props.cartLength} color="primary">
+          <Badge badgeContent={cartLength} color="primary">
             <ShoppingCartIcon fontSize={"large"} color={"action"} />
           </Badge>
         </NavLink>

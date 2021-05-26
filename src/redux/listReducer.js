@@ -5,7 +5,7 @@ import {
   TOGGLE_FAVORITE,
 } from "../common/constances";
 
-let initialState = {
+const initialState = {
   itemsData: [],
   favoriteItems: [],
   compareItems: [],
@@ -13,6 +13,8 @@ let initialState = {
 };
 
 export const listReducer = (state = initialState, action) => {
+  const stateCopy = { ...state }
+
   switch (action.type) {
     case SET_ITEMS:
       return {
@@ -20,7 +22,6 @@ export const listReducer = (state = initialState, action) => {
         itemsData: [...action.items],
       };
     case TOGGLE_FAVORITE: {
-      let stateCopy = { ...state };
       stateCopy.itemsData = [
         ...stateCopy.itemsData.map((item) => {
           if (item.id === action.itemId) {
@@ -35,7 +36,6 @@ export const listReducer = (state = initialState, action) => {
       return stateCopy;
     }
     case TOGGLE_CART: {
-      let stateCopy = { ...state };
       stateCopy.itemsData = [
         ...stateCopy.itemsData.map((item) => {
           if (item.id === action.itemId) {
@@ -50,7 +50,6 @@ export const listReducer = (state = initialState, action) => {
       return stateCopy;
     }
     case TOGGLE_COMPARE: {
-      let stateCopy = { ...state };
       stateCopy.itemsData = [
         ...stateCopy.itemsData.map((item) => {
           if (item.id === action.itemId) {
@@ -69,7 +68,3 @@ export const listReducer = (state = initialState, action) => {
   }
 };
 
-export const setItems = (items) => ({ type: SET_ITEMS, items });
-export const toggleFavorite = (itemId) => ({ type: TOGGLE_FAVORITE, itemId });
-export const toggleCart = (itemId) => ({ type: TOGGLE_CART, itemId });
-export const toggleCompare = (itemId) => ({ type: TOGGLE_COMPARE, itemId });
